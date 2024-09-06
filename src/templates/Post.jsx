@@ -40,7 +40,7 @@ const Post = () => {
                             <Link to={`/blog/${restData.previous_post['slug']}`} className="prev-post">Previous: {restData.previous_post['title']}</Link>
                         }
                         {restData.next_post['id'] &&
-                            <Link to={`/blog/${restData.next_post['slug']}`} className="next-post">Previous: {restData.next_post['title']}</Link>
+                            <Link to={`/blog/${restData.next_post['slug']}`} className="next-post">Next: {restData.next_post['title']}</Link>
                         }
                     </nav>
 
