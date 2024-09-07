@@ -33,7 +33,12 @@ const Services = () => {
                     <h1>{restDataPage.title.rendered}</h1>
                     <div className="entry-content" dangerouslySetInnerHTML={{ __html: restDataPage.content.rendered }}>
                     </div>
-                    {/* Map through restDataPosts here, similar to Posts.js */}
+                    {restDataPosts.map(post =>
+                        <article key={post.id} id={`post-${post.id}`}>
+                            <h2>{post.title.rendered}</h2>
+                            <div className="entry-content" dangerouslySetInnerHTML={{ __html: post.acf.services }}></div>
+                        </article>
+                    )}
                 </article>
                 :
                 <Loading />
