@@ -29,7 +29,7 @@ const Contact = () => {
                     <div className="entry-content">
                         <section>
                             <h2>{restData.acf.our_address}</h2>
-                            <p>{restData.acf.our_email}</p>
+                            <a href={`mailto:${restData.acf.our_email}`}><p>{restData.acf.our_email}</p></a>
                         </section>
 
                     </div>

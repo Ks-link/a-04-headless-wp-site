@@ -1,0 +1,12 @@
+# Use this code if your React App will be in a subdirectory/folder on the server
+# Create a .htaccess file in that subdirectory/folder and copy this code
+# Replace the word SUBDIRECTORY on lines 6 and 11 with the subdirectory/folder name
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /headless-wp-react/
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteRule . /headless-wp-react/index.html [L]
+</IfModule>
